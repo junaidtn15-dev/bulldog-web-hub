@@ -42,8 +42,8 @@ export function LoadTheTruck() {
   const settle = useCallback(
     (pos: number) => {
       if (pos >= DROP_ZONE) {
-        xRef.current = 72;
-        setX(72);
+        xRef.current = 60;
+        setX(60);
         setLoaded(true);
         burst();
       } else {
@@ -196,7 +196,7 @@ export function LoadTheTruck() {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
               setHint(false);
-              setX(72);
+              setX(60);
               setLoaded(true);
               burst();
             }
