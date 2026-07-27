@@ -18,7 +18,6 @@ import { QuoteForm } from "@/components/site/quote-form";
 import { CtaPair, FinalCta, TrustBadges } from "@/components/site/sections";
 import { BulldogLogo } from "@/components/site/logo";
 import { ValueCalculator } from "@/components/site/value-calculator";
-import { XrayTeardown } from "@/components/site/xray-teardown";
 import { LoadTheTruck } from "@/components/site/load-the-truck";
 import { BUSINESS, CITIES, FAQS, WE_BUY, WE_DONT_BUY } from "@/lib/business";
 
@@ -125,23 +124,6 @@ function Index() {
           "Serving Calgary",
         ]}
       />
-
-      {/* QUOTE PANEL */}
-      <section className="relative overflow-hidden py-24">
-        <Aurora />
-        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-          <Reveal>
-            <SectionHeading
-              eyebrow="X-ray teardown"
-              title="Scan your car. Watch the money appear."
-              sub="Drag the scanner lens across the vehicle to reveal what's underneath, then tap each glowing component to see exactly where your payout comes from."
-            />
-          </Reveal>
-          <Reveal delay={120} className="mt-10">
-            <XrayTeardown />
-          </Reveal>
-        </div>
-      </section>
 
       {/* PICKUP SIMULATOR */}
       <section className="relative overflow-hidden py-24">
