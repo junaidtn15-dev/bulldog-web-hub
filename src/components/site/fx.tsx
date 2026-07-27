@@ -6,18 +6,18 @@ export function Aurora({ className }: { className?: string }) {
   return (
     <div className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)} aria-hidden>
       <div
-        className="absolute -left-1/4 top-[-20%] h-[70vh] w-[70vh] rounded-full opacity-40 blur-[120px]"
+        className="absolute -left-1/4 top-[-20%] h-[70vh] w-[70vh] rounded-full opacity-[0.12] blur-[120px]"
         style={{ background: "var(--primary)", animation: "auroraShift 18s ease-in-out infinite" }}
       />
       <div
-        className="absolute -right-1/5 bottom-[-25%] h-[60vh] w-[60vh] rounded-full opacity-25 blur-[130px]"
+        className="absolute -right-1/5 bottom-[-25%] h-[60vh] w-[60vh] rounded-full opacity-[0.10] blur-[130px]"
         style={{ background: "var(--accent)", animation: "auroraShift 24s ease-in-out infinite reverse" }}
       />
       <div
         className="absolute inset-0 opacity-[0.18]"
         style={{
           backgroundImage:
-            "linear-gradient(to right, color-mix(in oklab, white 8%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, white 8%, transparent) 1px, transparent 1px)",
+            "linear-gradient(to right, color-mix(in oklab, var(--primary) 14%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in oklab, var(--primary) 14%, transparent) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
           maskImage: "radial-gradient(ellipse at 50% 40%, black, transparent 75%)",
         }}

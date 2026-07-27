@@ -14,7 +14,7 @@ export function BulldogLogo({
       <span
         aria-hidden
         className="absolute inset-0 rounded-full blur-xl"
-        style={{ background: "radial-gradient(circle, oklch(0.53 0.204 27.5 / 45%), transparent 70%)" }}
+        style={{ background: "radial-gradient(circle, oklch(0.52 0.21 258 / 35%), transparent 70%)" }}
       />
       <img
         src={logo}
@@ -22,7 +22,7 @@ export function BulldogLogo({
         width={1024}
         height={1024}
         loading={priority ? "eager" : "lazy"}
-        className={`relative size-full object-contain drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] ${
+        className={`relative size-full object-contain drop-shadow-[0_6px_24px_rgba(30,58,138,0.28)] ${
           spin ? "animate-[floaty_6s_ease-in-out_infinite]" : ""
         }`}
       />

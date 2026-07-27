@@ -62,7 +62,7 @@ export function ScannerHero() {
         }
         ctx.beginPath();
         ctx.arc(p.x * w, p.y * h, p.s, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,${140 + p.z * 60},${120 + p.z * 90},${0.12 + p.z * 0.35})`;
+        ctx.fillStyle = `rgba(${40 + p.z * 40},${90 + p.z * 60},${200 + p.z * 40},${0.14 + p.z * 0.35})`;
         ctx.fill();
       }
       raf = requestAnimationFrame(draw);
@@ -107,13 +107,13 @@ export function ScannerHero() {
           {/* chassis silhouette */}
           <svg
             viewBox="0 0 400 170"
-            className="absolute inset-0 m-auto h-auto w-full drop-shadow-[0_0_28px_rgba(198,40,40,0.55)]"
+            className="absolute inset-0 m-auto h-auto w-full drop-shadow-[0_0_28px_rgba(37,99,235,0.35)]"
             style={{ animation: "floaty 6s ease-in-out infinite" }}
           >
             <defs>
               <linearGradient id="bdChassis" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#ff5a5a" />
-                <stop offset="100%" stopColor="#5ad2ff" />
+                <stop offset="0%" stopColor="#2563eb" />
+                <stop offset="100%" stopColor="#22b8ff" />
               </linearGradient>
             </defs>
             <g
