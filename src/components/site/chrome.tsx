@@ -143,7 +143,10 @@ export function SiteFooter() {
       />
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div>
-          <p className="font-display text-lg font-extrabold uppercase">{BUSINESS.name}</p>
+          <div className="flex items-center gap-3">
+            <BulldogLogo className="size-12" />
+            <p className="font-display text-lg font-extrabold uppercase">{BUSINESS.name}</p>
+          </div>
           <p className="mt-3 text-sm text-muted-foreground">{BUSINESS.tagline}</p>
           <a href={BUSINESS.phoneHref} className="mt-4 block font-display text-2xl font-extrabold text-primary">
             {BUSINESS.phone}
@@ -157,7 +160,6 @@ export function SiteFooter() {
             { to: "/about", label: "About" },
             { to: "/how-it-works", label: "How It Works" },
             { to: "/what-we-buy", label: "What We Buy" },
-            { to: "/blog", label: "Blog" },
           ]}
         />
         <FooterCol
@@ -169,10 +171,10 @@ export function SiteFooter() {
           ]}
         />
         <FooterCol
-          title="Legal"
+          title="Get started"
           links={[
-            { to: "/privacy", label: "Privacy Policy" },
-            { to: "/terms", label: "Terms & Conditions" },
+            { to: "/contact", label: "Get My Cash Offer" },
+            { to: "/how-it-works", label: "Sell In 3 Steps" },
           ]}
         />
       </div>
