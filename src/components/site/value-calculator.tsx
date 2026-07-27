@@ -48,7 +48,7 @@ export function ValueCalculator() {
       <div
         aria-hidden
         className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full blur-3xl"
-        style={{ background: "oklch(0.53 0.204 27.5 / 30%)" }}
+        style={{ background: "oklch(0.52 0.21 258 / 25%)" }}
       />
       <div className="relative">
         <p className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
