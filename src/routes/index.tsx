@@ -19,6 +19,7 @@ import { CtaPair, FinalCta, TrustBadges } from "@/components/site/sections";
 import { BulldogLogo } from "@/components/site/logo";
 import { ValueCalculator } from "@/components/site/value-calculator";
 import { XrayTeardown } from "@/components/site/xray-teardown";
+import { LoadTheTruck } from "@/components/site/load-the-truck";
 import { BUSINESS, CITIES, FAQS, WE_BUY, WE_DONT_BUY } from "@/lib/business";
 
 const TITLE = "Cash for Junk Cars Calgary | Bull Dog Junk Cars";
@@ -138,6 +139,23 @@ function Index() {
           </Reveal>
           <Reveal delay={120} className="mt-10">
             <XrayTeardown />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* PICKUP SIMULATOR */}
+      <section className="relative overflow-hidden py-24">
+        <Aurora />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Pickup simulator"
+              title="Drag your car onto our flatbed"
+              sub="Load it up and watch the cash come out — then see how Bull Dog's offer stacks against every other quote in the city."
+            />
+          </Reveal>
+          <Reveal delay={120} className="mt-10">
+            <LoadTheTruck />
           </Reveal>
         </div>
       </section>
