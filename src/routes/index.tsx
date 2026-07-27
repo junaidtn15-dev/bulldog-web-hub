@@ -143,6 +143,23 @@ function Index() {
         </div>
       </section>
 
+      {/* PICKUP SIMULATOR */}
+      <section className="relative overflow-hidden py-24">
+        <Aurora />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Pickup simulator"
+              title="Drag your car onto our flatbed"
+              sub="Load it up and watch the cash come out — then see how Bull Dog's offer stacks against every other quote in the city."
+            />
+          </Reveal>
+          <Reveal delay={120} className="mt-10">
+            <LoadTheTruck />
+          </Reveal>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
