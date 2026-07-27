@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowUp, Menu, Phone, X } from "lucide-react";
 import { BUSINESS } from "@/lib/business";
 import { ScrollProgress } from "./fx";
+import { BulldogLogo, LogoLockup } from "./logo";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -10,7 +11,6 @@ const NAV = [
   { to: "/what-we-buy", label: "What We Buy" },
   { to: "/service-areas", label: "Service Areas" },
   { to: "/faq", label: "FAQ" },
-  { to: "/blog", label: "Blog" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -35,18 +35,7 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-            <span
-              className="grid size-9 place-items-center rounded-lg font-display text-sm font-extrabold text-primary-foreground"
-              style={{ background: "var(--gradient-crimson)", boxShadow: "var(--shadow-glow)" }}
-            >
-              BD
-            </span>
-            <span className="font-display text-sm font-extrabold uppercase leading-tight tracking-wide">
-              Bull Dog
-              <span className="block text-[10px] font-semibold tracking-[0.24em] text-muted-foreground">
-                Junk Cars
-              </span>
-            </span>
+            <LogoLockup compact />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">
