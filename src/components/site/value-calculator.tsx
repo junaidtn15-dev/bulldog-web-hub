@@ -21,7 +21,7 @@ const CONDITIONS = [
 const CURRENT_YEAR = new Date().getFullYear();
 
 function money(n: number) {
-  return `$${Math.round(n / 10) * 10).toLocaleString()}`;
+  return `$${(Math.round(n / 10) * 10).toLocaleString()}`;
 }
 
 export function ValueCalculator() {
