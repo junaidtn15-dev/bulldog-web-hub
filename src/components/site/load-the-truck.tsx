@@ -72,6 +72,7 @@ export function LoadTheTruck() {
     if (!dragging) return;
     const move = (e: PointerEvent) => onMove(e.clientX);
     const up = () => {
+      console.log("DROP", xRef.current);
       setDragging(false);
       settle(xRef.current);
     };
