@@ -291,3 +291,14 @@
     transition-duration: 0.001ms !important;
   }
 }
+
+@keyframes scanPing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
