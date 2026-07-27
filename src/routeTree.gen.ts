@@ -9,8 +9,20 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhatWeBuyRouteImport } from './routes/what-we-buy'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WhatWeBuyRoute = WhatWeBuyRouteImport.update({
+  id: '/what-we-buy',
+  path: '/what-we-buy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +31,50 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/what-we-buy': typeof WhatWeBuyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/what-we-buy': typeof WhatWeBuyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/what-we-buy': typeof WhatWeBuyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/how-it-works' | '/what-we-buy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/how-it-works' | '/what-we-buy'
+  id: '__root__' | '/' | '/how-it-works' | '/what-we-buy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  WhatWeBuyRoute: typeof WhatWeBuyRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/what-we-buy': {
+      id: '/what-we-buy'
+      path: '/what-we-buy'
+      fullPath: '/what-we-buy'
+      preLoaderRoute: typeof WhatWeBuyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +87,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  WhatWeBuyRoute: WhatWeBuyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
