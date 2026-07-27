@@ -2,7 +2,7 @@ import { createFileRoute, notFound, Link } from "@tanstack/react-router";
 import { PageHero, FinalCta, Prose } from "@/components/site/sections";
 import { QuoteForm } from "@/components/site/quote-form";
 import { Reveal } from "@/components/site/fx";
-import { BUSINESS, CITIES } from "@/lib/business";
+import { BUSINESS, CITIES, type City } from "@/lib/business";
 
 export const Route = createFileRoute("/service-areas/$city")({
   loader: ({ params }) => {
@@ -57,7 +57,7 @@ export const Route = createFileRoute("/service-areas/$city")({
 });
 
 function CityPage() {
-  const { city } = Route.useLoaderData();
+  const { city } = Route.useLoaderData() as { city: City };
   const others = CITIES.filter((c) => c.slug !== city.slug).slice(0, 5);
 
   return (
