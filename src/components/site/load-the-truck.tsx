@@ -23,6 +23,7 @@ export function LoadTheTruck() {
   const [bills, setBills] = useState<Bill[]>([]);
   const [payout, setPayout] = useState(0);
   const [hint, setHint] = useState(true);
+  const xRef = useRef(6);
 
   const DROP_ZONE = 58; // % beyond which the car is "on the bed"
 
@@ -57,10 +58,30 @@ export function LoadTheTruck() {
       if (!el) return;
       const r = el.getBoundingClientRect();
       const pct = ((clientX - r.left) / r.width) * 100 - 9;
-      setX(Math.max(2, Math.min(76, pct)));
+      const clamped = Math.max(2, Math.min(76, pct));
+      xRef.current = clamped;
+      setX(clamped);
     },
     [],
   );
+
+  // window-level drag so the pointer can leave the track without losing the car
+  useEffect(() => {
+    if (!dragging) return;
+    const move = (e: PointerEvent) => onMove(e.clientX);
+    const up = () => {
+      setDragging(false);
+      settle(xRef.current);
+    };
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", up);
+    window.addEventListener("pointercancel", up);
+    return () => {
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", up);
+      window.removeEventListener("pointercancel", up);
+    };
+  }, [dragging, onMove, settle]);
 
   // payout roll-up once loaded
   useEffect(() => {
