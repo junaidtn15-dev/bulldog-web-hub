@@ -19,6 +19,7 @@ import { CtaPair, FinalCta, TrustBadges } from "@/components/site/sections";
 import { BulldogLogo } from "@/components/site/logo";
 import { ValueCalculator } from "@/components/site/value-calculator";
 import { XrayTeardown } from "@/components/site/xray-teardown";
+import { LoadTheTruck } from "@/components/site/load-the-truck";
 import { BUSINESS, CITIES, FAQS, WE_BUY, WE_DONT_BUY } from "@/lib/business";
 
 const TITLE = "Cash for Junk Cars Calgary | Bull Dog Junk Cars";
