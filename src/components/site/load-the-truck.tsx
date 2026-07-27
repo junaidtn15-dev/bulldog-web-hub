@@ -123,6 +123,7 @@ export function LoadTheTruck() {
     setHint(true);
   };
 
+  console.log("RENDER x", x, dragging, loaded);
   const near = !loaded && x >= DROP_ZONE - 12;
 
   return (
