@@ -212,6 +212,7 @@
 }
 
 @keyframes glowPulse {
+  /* keep */
   0%,
   100% {
     box-shadow: 0 0 0 0 oklch(0.52 0.21 258 / 40%);
@@ -288,5 +289,16 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes scanPing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
   }
 }
