@@ -119,19 +119,6 @@ export function LoadTheTruck() {
 
       <div
         ref={trackRef}
-        onPointerMove={(e) => dragging && onMove(e.clientX)}
-        onPointerUp={() => {
-          if (dragging) {
-            setDragging(false);
-            settle(x);
-          }
-        }}
-        onPointerLeave={() => {
-          if (dragging) {
-            setDragging(false);
-            settle(x);
-          }
-        }}
         className="relative h-56 w-full touch-none select-none overflow-hidden rounded-2xl border border-border/60 bg-card/50 sm:h-64"
       >
         {/* horizon grid */}
@@ -173,8 +160,7 @@ export function LoadTheTruck() {
 
         {/* car */}
         <div
-          onPointerDown={(e) => {
-            (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
+          onPointerDown={() => {
             setHint(false);
             setLoaded(false);
             setDragging(true);
