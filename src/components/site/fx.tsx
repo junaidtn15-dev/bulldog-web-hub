@@ -6,11 +6,11 @@ export function Aurora({ className }: { className?: string }) {
   return (
     <div className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)} aria-hidden>
       <div
-        className="absolute -left-1/4 top-[-20%] h-[70vh] w-[70vh] rounded-full opacity-25 blur-[120px]"
+        className="absolute -left-1/4 top-[-20%] h-[70vh] w-[70vh] rounded-full opacity-[0.12] blur-[120px]"
         style={{ background: "var(--primary)", animation: "auroraShift 18s ease-in-out infinite" }}
       />
       <div
-        className="absolute -right-1/5 bottom-[-25%] h-[60vh] w-[60vh] rounded-full opacity-20 blur-[130px]"
+        className="absolute -right-1/5 bottom-[-25%] h-[60vh] w-[60vh] rounded-full opacity-[0.10] blur-[130px]"
         style={{ background: "var(--accent)", animation: "auroraShift 24s ease-in-out infinite reverse" }}
       />
       <div
