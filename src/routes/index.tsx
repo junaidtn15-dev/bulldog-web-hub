@@ -16,6 +16,8 @@ import { Aurora, Counter, Marquee, Reveal, SectionHeading, TiltCard } from "@/co
 import { ScannerHero } from "@/components/site/scanner-hero";
 import { QuoteForm } from "@/components/site/quote-form";
 import { CtaPair, FinalCta, TrustBadges } from "@/components/site/sections";
+import { BulldogLogo } from "@/components/site/logo";
+import { ValueCalculator } from "@/components/site/value-calculator";
 import { BUSINESS, CITIES, FAQS, WE_BUY, WE_DONT_BUY } from "@/lib/business";
 
 const TITLE = "Cash for Junk Cars Calgary | Bull Dog Junk Cars";
@@ -78,13 +80,24 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-32">
         <Aurora />
+        <div aria-hidden className="grid-bg pointer-events-none absolute inset-0" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
+          <div style={{ animation: "riseIn 0.8s ease-out both" }}>
+            <div className="mb-6 flex items-center gap-4">
+              <BulldogLogo className="size-20 sm:size-24" spin priority />
+              <div>
+                <p className="font-display text-xs font-bold uppercase tracking-[0.4em] text-primary">Bull Dog</p>
+                <p className="font-display text-xl font-extrabold uppercase tracking-tight text-chrome sm:text-2xl">
+                  Junk Cars
+                </p>
+              </div>
+            </div>
             <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
               <span className="size-1.5 rounded-full bg-success" /> Open now · {BUSINESS.hours}
             </p>
             <h1 className="text-balance text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">
-              Get Cash For Your <span className="text-gradient">Junk Car</span> Today
+              <span className="text-chrome">Get Cash For Your</span>{" "}
+              <span className="text-gradient">Junk Car</span> Today
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-muted-foreground sm:text-lg">
               {BUSINESS.name} pays top dollar for unwanted vehicles across Calgary and surrounding communities.
@@ -112,6 +125,34 @@ function Index() {
       />
 
       {/* QUOTE PANEL */}
+      <section className="relative overflow-hidden py-24">
+        <Aurora />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <Reveal>
+            <SectionHeading
+              eyebrow="Calculator"
+              title="See what your car is worth in 10 seconds"
+              sub="Pick your vehicle type, condition and year — the estimator does the rest, no email required."
+            />
+            <ul className="mt-6 space-y-3 text-sm text-muted-foreground">
+              {[
+                "Live estimate based on type, age, condition and completeness",
+                "Real offers range from $250 to $20,000",
+                "Zero obligation — the number is yours to keep",
+              ].map((t) => (
+                <li key={t} className="flex gap-3">
+                  <span className="text-primary">▸</span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={120}>
+            <ValueCalculator />
+          </Reveal>
+        </div>
+      </section>
+
       <section id="quote" className="relative scroll-mt-24 overflow-hidden py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
