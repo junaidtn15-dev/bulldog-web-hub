@@ -13,6 +13,7 @@ import { Route as WhatWeBuyRouteImport } from './routes/what-we-buy'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServiceAreasIndexRouteImport } from './routes/service-areas.index'
 
 const WhatWeBuyRoute = WhatWeBuyRouteImport.update({
   id: '/what-we-buy',
@@ -34,38 +35,56 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServiceAreasIndexRoute = ServiceAreasIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServiceAreasRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/how-it-works': typeof HowItWorksRoute
-  '/service-areas': typeof ServiceAreasRoute
+  '/service-areas': typeof ServiceAreasRouteWithChildren
   '/what-we-buy': typeof WhatWeBuyRoute
+  '/service-areas/': typeof ServiceAreasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/how-it-works': typeof HowItWorksRoute
-  '/service-areas': typeof ServiceAreasRoute
   '/what-we-buy': typeof WhatWeBuyRoute
+  '/service-areas': typeof ServiceAreasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/how-it-works': typeof HowItWorksRoute
-  '/service-areas': typeof ServiceAreasRoute
+  '/service-areas': typeof ServiceAreasRouteWithChildren
   '/what-we-buy': typeof WhatWeBuyRoute
+  '/service-areas/': typeof ServiceAreasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/how-it-works' | '/service-areas' | '/what-we-buy'
+  fullPaths:
+    | '/'
+    | '/how-it-works'
+    | '/service-areas'
+    | '/what-we-buy'
+    | '/service-areas/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/how-it-works' | '/service-areas' | '/what-we-buy'
-  id: '__root__' | '/' | '/how-it-works' | '/service-areas' | '/what-we-buy'
+  to: '/' | '/how-it-works' | '/what-we-buy' | '/service-areas'
+  id:
+    | '__root__'
+    | '/'
+    | '/how-it-works'
+    | '/service-areas'
+    | '/what-we-buy'
+    | '/service-areas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HowItWorksRoute: typeof HowItWorksRoute
-  ServiceAreasRoute: typeof ServiceAreasRoute
+  ServiceAreasRoute: typeof ServiceAreasRouteWithChildren
   WhatWeBuyRoute: typeof WhatWeBuyRoute
 }
 
@@ -99,13 +118,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/service-areas/': {
+      id: '/service-areas/'
+      path: '/'
+      fullPath: '/service-areas/'
+      preLoaderRoute: typeof ServiceAreasIndexRouteImport
+      parentRoute: typeof ServiceAreasRoute
+    }
   }
 }
+
+interface ServiceAreasRouteChildren {
+  ServiceAreasIndexRoute: typeof ServiceAreasIndexRoute
+}
+
+const ServiceAreasRouteChildren: ServiceAreasRouteChildren = {
+  ServiceAreasIndexRoute: ServiceAreasIndexRoute,
+}
+
+const ServiceAreasRouteWithChildren = ServiceAreasRoute._addFileChildren(
+  ServiceAreasRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HowItWorksRoute: HowItWorksRoute,
-  ServiceAreasRoute: ServiceAreasRoute,
+  ServiceAreasRoute: ServiceAreasRouteWithChildren,
   WhatWeBuyRoute: WhatWeBuyRoute,
 }
 export const routeTree = rootRouteImport
