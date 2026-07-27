@@ -42,10 +42,12 @@ export function LoadTheTruck() {
   const settle = useCallback(
     (pos: number) => {
       if (pos >= DROP_ZONE) {
+        xRef.current = 72;
         setX(72);
         setLoaded(true);
         burst();
       } else {
+        xRef.current = 6;
         setX(6);
       }
     },
@@ -115,6 +117,7 @@ export function LoadTheTruck() {
 
   const reset = () => {
     setLoaded(false);
+    xRef.current = 6;
     setX(6);
     setHint(true);
   };
