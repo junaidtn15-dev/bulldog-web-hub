@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WhatWeBuyRouteImport } from './routes/what-we-buy'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as FaqRouteImport } from './routes/faq'
@@ -22,6 +23,11 @@ import { Route as ServiceAreasCityRouteImport } from './routes/service-areas.$ci
 const WhatWeBuyRoute = WhatWeBuyRouteImport.update({
   id: '/what-we-buy',
   path: '/what-we-buy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServiceAreasRoute = ServiceAreasRouteImport.update({
@@ -72,6 +78,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
   '/service-areas': typeof ServiceAreasRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-buy': typeof WhatWeBuyRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-buy': typeof WhatWeBuyRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas': typeof ServiceAreasIndexRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/how-it-works': typeof HowItWorksRoute
   '/service-areas': typeof ServiceAreasRouteWithChildren
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/what-we-buy': typeof WhatWeBuyRoute
   '/service-areas/$city': typeof ServiceAreasCityRoute
   '/service-areas/': typeof ServiceAreasIndexRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/how-it-works'
     | '/service-areas'
+    | '/sitemap.xml'
     | '/what-we-buy'
     | '/service-areas/$city'
     | '/service-areas/'
@@ -117,6 +127,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/how-it-works'
+    | '/sitemap.xml'
     | '/what-we-buy'
     | '/service-areas/$city'
     | '/service-areas'
@@ -128,6 +139,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/how-it-works'
     | '/service-areas'
+    | '/sitemap.xml'
     | '/what-we-buy'
     | '/service-areas/$city'
     | '/service-areas/'
@@ -140,6 +152,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   HowItWorksRoute: typeof HowItWorksRoute
   ServiceAreasRoute: typeof ServiceAreasRouteWithChildren
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   WhatWeBuyRoute: typeof WhatWeBuyRoute
 }
 
@@ -150,6 +163,13 @@ declare module '@tanstack/react-router' {
       path: '/what-we-buy'
       fullPath: '/what-we-buy'
       preLoaderRoute: typeof WhatWeBuyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/service-areas': {
@@ -232,6 +252,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   HowItWorksRoute: HowItWorksRoute,
   ServiceAreasRoute: ServiceAreasRouteWithChildren,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   WhatWeBuyRoute: WhatWeBuyRoute,
 }
 export const routeTree = rootRouteImport

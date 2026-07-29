@@ -1,4 +1,4 @@
-import logo from "@/assets/bulldog-logo.png";
+import logo from "@/assets/bulldog-logo.webp";
 
 export function BulldogLogo({
   className = "size-10",
@@ -19,9 +19,11 @@ export function BulldogLogo({
       <img
         src={logo}
         alt="Bull Dog Junk Cars logo"
-        width={1024}
-        height={1024}
+        width={512}
+        height={512}
         loading={priority ? "eager" : "lazy"}
+        decoding={priority ? "sync" : "async"}
+        fetchPriority={priority ? "high" : "auto"}
         className={`relative size-full object-contain drop-shadow-[0_6px_24px_rgba(30,58,138,0.28)] ${
           spin ? "animate-[floaty_6s_ease-in-out_infinite]" : ""
         }`}
