@@ -137,7 +137,7 @@ function Index() {
               sub="Keep scrolling — every component we recover lights up and adds to the live payout."
             />
           </Reveal>
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <ScrapLine />
           </div>
         </div>
@@ -221,7 +221,7 @@ function Index() {
           <Reveal>
             <SectionHeading eyebrow="How it works" title="Three steps from junk to cash" />
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-6 md:grid-cols-3">
             {STEPS.map((s, i) => (
               <Reveal key={s.title} delay={i * 120}>
                 <TiltCard className="h-full">
@@ -243,7 +243,7 @@ function Index() {
           <Reveal>
             <SectionHeading eyebrow="Why Bull Dog" title="Built to be the easiest sale you'll ever make" />
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {BENEFITS.map((b, i) => (
               <Reveal key={b.title} delay={i * 80}>
                 <TiltCard className="h-full">
@@ -269,7 +269,7 @@ function Index() {
               sub="If it has four wheels and a title, Bull Dog will make you an offer."
             />
           </Reveal>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {WE_BUY.map((v, i) => (
               <Reveal key={v} delay={i * 60}>
                 <TiltCard className="flex h-full items-center gap-4">
@@ -300,7 +300,7 @@ function Index() {
               title="How much is your vehicle worth?"
               sub="Offers depend on make, model, year, condition, curb weight, current scrap metal prices and parts demand across Alberta."
             />
-            <div className="glass mx-auto mt-10 flex max-w-2xl flex-col items-center gap-2 rounded-2xl p-10">
+            <div className="glass mx-auto mt-8 flex max-w-2xl flex-col items-center gap-2 rounded-2xl p-6 sm:mt-10 sm:p-10">
               <p className="font-display text-5xl font-extrabold text-primary sm:text-6xl">
                 <Counter to={250} prefix="$" /> – <Counter to={20000} prefix="$" />
               </p>
@@ -321,7 +321,7 @@ function Index() {
               sub="Nine communities on our daily and scheduled routes — all with the same free towing."
             />
           </Reveal>
-          <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="mt-8 grid sm:mt-12 gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Reveal>
               <div className="glass relative aspect-square overflow-hidden rounded-2xl p-6">
                 <div
@@ -394,7 +394,7 @@ function Index() {
           <Reveal>
             <SectionHeading eyebrow="Reviews" title="Calgary sellers say it best" />
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid sm:mt-12 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={i * 90}>
                 <TiltCard className="h-full">
