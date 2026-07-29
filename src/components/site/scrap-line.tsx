@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Banknote, Cog, Disc3, Fuel, Sparkles } from "lucide-react";
 
 const PARTS = [
-  { label: "Catalytic converter", value: 420, icon: Cog, x: "18%", y: "34%" },
-  { label: "Aluminum wheels", value: 260, icon: Disc3, x: "30%", y: "72%" },
-  { label: "Engine block", value: 540, icon: Fuel, x: "48%", y: "40%" },
-  { label: "Battery + wiring", value: 180, icon: Sparkles, x: "68%", y: "62%" },
-  { label: "Steel body weight", value: 380, icon: Banknote, x: "80%", y: "36%" },
+  { label: "Catalytic converter", value: 420, icon: Cog, x: "27%", y: "22%" },
+  { label: "Aluminum wheels", value: 260, icon: Disc3, x: "26%", y: "82%" },
+  { label: "Engine block", value: 540, icon: Fuel, x: "50%", y: "42%" },
+  { label: "Battery + wiring", value: 180, icon: Sparkles, x: "63%", y: "68%" },
+  { label: "Steel body weight", value: 380, icon: Banknote, x: "72%", y: "20%" },
 ];
 
 const TOTAL = PARTS.reduce((s, p) => s + p.value, 0);
@@ -104,7 +104,7 @@ export function ScrapLine() {
                 transition: "opacity .45s ease, transform .45s cubic-bezier(.22,1,.36,1)",
               }}
             >
-              <span className="glass flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-[var(--shadow-glow)]">
+              <span className="glass flex items-center gap-2 whitespace-nowrap rounded-full px-3 py-1.5 text-[11px] font-semibold shadow-[var(--shadow-glow)]">
                 <part.icon className="size-3.5 text-primary" />
                 {part.label}
                 <span className="text-primary">+${part.value}</span>
