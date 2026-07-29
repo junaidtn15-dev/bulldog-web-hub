@@ -104,10 +104,10 @@ export function ScrapLine() {
                 transition: "opacity .45s ease, transform .45s cubic-bezier(.22,1,.36,1)",
               }}
             >
-              <span className="glass flex items-center gap-1.5 whitespace-nowrap rounded-full px-2 py-1 text-[9px] font-semibold shadow-[var(--shadow-glow)] sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[11px]">
+              <span className="glass flex max-w-full items-center gap-1.5 rounded-full px-2 py-1 text-[9px] font-semibold shadow-[var(--shadow-glow)] sm:gap-2 sm:px-3 sm:py-1.5 sm:text-[11px]">
                 <part.icon className="size-3 shrink-0 text-primary sm:size-3.5" />
-                <span className="truncate">{part.label}</span>
-                <span className="text-primary">+${part.value}</span>
+                <span className="min-w-0 truncate">{part.label}</span>
+                <span className="shrink-0 text-primary">+${part.value}</span>
               </span>
               {on ? (
                 <span
