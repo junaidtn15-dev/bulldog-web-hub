@@ -80,32 +80,32 @@ function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-32">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         <Aurora />
         <div aria-hidden className="grid-bg pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-10 sm:gap-10 sm:px-6 sm:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div style={{ animation: "riseIn 0.8s ease-out both" }}>
-            <div className="mb-6 flex items-center gap-4">
-              <BulldogLogo className="size-20 sm:size-24" spin priority />
-              <div>
+            <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
+              <BulldogLogo className="size-14 sm:size-24" spin priority />
+              <div className="min-w-0">
                 <p className="font-display text-xs font-bold uppercase tracking-[0.4em] text-primary">Bull Dog</p>
                 <p className="font-display text-xl font-extrabold uppercase tracking-tight text-chrome sm:text-2xl">
                   Junk Cars
                 </p>
               </div>
             </div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px] sm:tracking-[0.24em]">
               <span className="size-1.5 rounded-full bg-success" /> Open now · {BUSINESS.hours}
             </p>
-            <h1 className="text-balance text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">
+            <h1 className="text-balance text-[2rem] leading-[1.05] sm:text-6xl sm:leading-[1.02] lg:text-7xl">
               <span className="text-chrome">Get Cash For Your</span>{" "}
               <span className="text-gradient">Junk Car</span> Today
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-muted-foreground sm:text-lg">
+            <p className="mt-4 max-w-xl text-pretty text-[15px] text-muted-foreground sm:mt-6 sm:text-lg">
               {BUSINESS.name} pays top dollar for unwanted vehicles across Calgary and surrounding communities.
               Free towing. Instant payment. No hidden fees. Running or not.
             </p>
-            <CtaPair className="mt-8" />
+            <CtaPair className="mt-6 sm:mt-8" />
             <TrustBadges className="mt-6" />
           </div>
           <div className="relative">
