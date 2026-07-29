@@ -72,7 +72,7 @@ export function SiteHeader() {
         </div>
 
         {open ? (
-          <nav className="glass border-t border-border/60 px-4 py-3 lg:hidden">
+          <nav className="glass max-h-[70vh] overflow-y-auto border-t border-border/60 px-4 py-3 lg:hidden">
             {NAV.map((item) => (
               <Link
                 key={item.to}
@@ -92,7 +92,7 @@ export function SiteHeader() {
 
 export function MobileActionBar() {
   return (
-    <div className="glass fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-2 border-t border-border/60 p-2 sm:hidden">
+    <div className="glass fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-2 border-t border-border/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] sm:hidden">
       <a
         href={BUSINESS.phoneHref}
         className="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 font-display text-xs font-bold uppercase text-primary-foreground"
@@ -142,8 +142,7 @@ export function SiteFooter() {
         }}
       />
       <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-14 md:grid-cols-4">
-        <div>
-          <div className="sm:col-span-2 md:col-span-1" />
+        <div className="sm:col-span-2 md:col-span-1">
           <div className="flex items-center gap-3">
             <BulldogLogo className="size-12" />
             <p className="font-display text-lg font-extrabold uppercase">{BUSINESS.name}</p>
