@@ -127,7 +127,7 @@ function Index() {
       />
 
       {/* PICKUP SIMULATOR */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
@@ -143,7 +143,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
@@ -159,7 +159,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <Reveal>
@@ -187,7 +187,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="quote" className="relative scroll-mt-24 overflow-hidden py-24">
+      <section id="quote" className="relative scroll-mt-24 overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <Reveal>
@@ -216,7 +216,7 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="relative py-24">
+      <section className="relative py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading eyebrow="How it works" title="Three steps from junk to cash" />
@@ -237,7 +237,7 @@ function Index() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
@@ -260,7 +260,7 @@ function Index() {
       </section>
 
       {/* WHAT WE BUY */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading
@@ -291,7 +291,7 @@ function Index() {
       </section>
 
       {/* VALUE */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
           <Reveal>
@@ -312,7 +312,7 @@ function Index() {
       </section>
 
       {/* SERVICE AREAS */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading
@@ -369,7 +369,7 @@ function Index() {
       </section>
 
       {/* STATS */}
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden py-12 sm:py-20">
         <Aurora />
         <div className="relative mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
           {[
@@ -389,7 +389,7 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading eyebrow="Reviews" title="Calgary sellers say it best" />
@@ -414,7 +414,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal>

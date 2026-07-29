@@ -15,7 +15,7 @@ export function PageHero({
   breadcrumb?: { to: string; label: string }[];
 }) {
   return (
-    <section className="relative overflow-hidden pb-16 pt-32 sm:pt-40">
+    <section className="relative overflow-hidden pb-10 pt-24 sm:pb-16 sm:pt-40">
       <Aurora />
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         {breadcrumb ? (
@@ -77,7 +77,7 @@ export function TrustBadges({ className = "" }: { className?: string }) {
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-14 sm:py-24">
       <Aurora />
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <Reveal>
