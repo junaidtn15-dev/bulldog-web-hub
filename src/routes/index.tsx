@@ -80,32 +80,32 @@ function Index() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-28 sm:pt-32">
+      <section className="relative overflow-hidden pt-24 sm:pt-32">
         <Aurora />
         <div aria-hidden className="grid-bg pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 pb-10 sm:gap-10 sm:px-6 sm:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div style={{ animation: "riseIn 0.8s ease-out both" }}>
-            <div className="mb-6 flex items-center gap-4">
-              <BulldogLogo className="size-20 sm:size-24" spin priority />
-              <div>
+            <div className="mb-5 flex items-center gap-3 sm:mb-6 sm:gap-4">
+              <BulldogLogo className="size-14 sm:size-24" spin priority />
+              <div className="min-w-0">
                 <p className="font-display text-xs font-bold uppercase tracking-[0.4em] text-primary">Bull Dog</p>
                 <p className="font-display text-xl font-extrabold uppercase tracking-tight text-chrome sm:text-2xl">
                   Junk Cars
                 </p>
               </div>
             </div>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:text-[11px] sm:tracking-[0.24em]">
               <span className="size-1.5 rounded-full bg-success" /> Open now · {BUSINESS.hours}
             </p>
-            <h1 className="text-balance text-4xl leading-[1.02] sm:text-6xl lg:text-7xl">
+            <h1 className="text-balance text-[2rem] leading-[1.05] sm:text-6xl sm:leading-[1.02] lg:text-7xl">
               <span className="text-chrome">Get Cash For Your</span>{" "}
               <span className="text-gradient">Junk Car</span> Today
             </h1>
-            <p className="mt-6 max-w-xl text-pretty text-muted-foreground sm:text-lg">
+            <p className="mt-4 max-w-xl text-pretty text-[15px] text-muted-foreground sm:mt-6 sm:text-lg">
               {BUSINESS.name} pays top dollar for unwanted vehicles across Calgary and surrounding communities.
               Free towing. Instant payment. No hidden fees. Running or not.
             </p>
-            <CtaPair className="mt-8" />
+            <CtaPair className="mt-6 sm:mt-8" />
             <TrustBadges className="mt-6" />
           </div>
           <div className="relative">
@@ -127,7 +127,7 @@ function Index() {
       />
 
       {/* PICKUP SIMULATOR */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
@@ -137,13 +137,13 @@ function Index() {
               sub="Keep scrolling — every component we recover lights up and adds to the live payout."
             />
           </Reveal>
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <ScrapLine />
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
@@ -159,7 +159,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <Reveal>
@@ -187,7 +187,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="quote" className="relative scroll-mt-24 overflow-hidden py-24">
+      <section id="quote" className="relative scroll-mt-24 overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <Reveal>
@@ -216,12 +216,12 @@ function Index() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="relative py-24">
+      <section className="relative py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading eyebrow="How it works" title="Three steps from junk to cash" />
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-6 md:grid-cols-3">
             {STEPS.map((s, i) => (
               <Reveal key={s.title} delay={i * 120}>
                 <TiltCard className="h-full">
@@ -237,13 +237,13 @@ function Index() {
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading eyebrow="Why Bull Dog" title="Built to be the easiest sale you'll ever make" />
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {BENEFITS.map((b, i) => (
               <Reveal key={b.title} delay={i * 80}>
                 <TiltCard className="h-full">
@@ -260,7 +260,7 @@ function Index() {
       </section>
 
       {/* WHAT WE BUY */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading
@@ -269,7 +269,7 @@ function Index() {
               sub="If it has four wheels and a title, Bull Dog will make you an offer."
             />
           </Reveal>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid sm:mt-12 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {WE_BUY.map((v, i) => (
               <Reveal key={v} delay={i * 60}>
                 <TiltCard className="flex h-full items-center gap-4">
@@ -291,7 +291,7 @@ function Index() {
       </section>
 
       {/* VALUE */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-5xl px-4 text-center sm:px-6">
           <Reveal>
@@ -300,19 +300,19 @@ function Index() {
               title="How much is your vehicle worth?"
               sub="Offers depend on make, model, year, condition, curb weight, current scrap metal prices and parts demand across Alberta."
             />
-            <div className="glass mx-auto mt-10 flex max-w-2xl flex-col items-center gap-2 rounded-2xl p-10">
+            <div className="glass mx-auto mt-8 flex max-w-2xl flex-col items-center gap-2 rounded-2xl p-6 sm:mt-10 sm:p-10">
               <p className="font-display text-5xl font-extrabold text-primary sm:text-6xl">
                 <Counter to={250} prefix="$" /> – <Counter to={20000} prefix="$" />
               </p>
               <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Typical offer range</p>
             </div>
-            <CtaPair className="mt-8 justify-center" />
+            <CtaPair className="mx-auto mt-8 justify-center" />
           </Reveal>
         </div>
       </section>
 
       {/* SERVICE AREAS */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading
@@ -321,7 +321,7 @@ function Index() {
               sub="Nine communities on our daily and scheduled routes — all with the same free towing."
             />
           </Reveal>
-          <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="mt-8 grid sm:mt-12 gap-8 lg:grid-cols-[1fr_1fr] lg:items-center">
             <Reveal>
               <div className="glass relative aspect-square overflow-hidden rounded-2xl p-6">
                 <div
@@ -337,7 +337,7 @@ function Index() {
                       key={c.slug}
                       to="/service-areas/$city"
                       params={{ city: c.slug }}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 px-2.5 py-1 text-[11px] font-semibold transition hover:border-primary hover:text-primary"
+                      className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 px-2 py-1 text-[10px] sm:px-2.5 sm:text-[11px] font-semibold transition hover:border-primary hover:text-primary"
                       style={{
                         left: `${50 + Math.cos(angle) * r}%`,
                         top: `${50 + Math.sin(angle) * r}%`,
@@ -369,7 +369,7 @@ function Index() {
       </section>
 
       {/* STATS */}
-      <section className="relative overflow-hidden py-20">
+      <section className="relative overflow-hidden py-12 sm:py-20">
         <Aurora />
         <div className="relative mx-auto grid max-w-6xl gap-5 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
           {[
@@ -389,12 +389,12 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-24">
+      <section className="py-14 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
             <SectionHeading eyebrow="Reviews" title="Calgary sellers say it best" />
           </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid sm:mt-12 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {TESTIMONIALS.map((t, i) => (
               <Reveal key={t.name} delay={i * 90}>
                 <TiltCard className="h-full">
@@ -414,7 +414,7 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-14 sm:py-24">
         <Aurora />
         <div className="relative mx-auto max-w-3xl px-4 sm:px-6">
           <Reveal>

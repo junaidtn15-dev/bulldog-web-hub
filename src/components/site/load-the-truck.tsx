@@ -253,13 +253,13 @@ export function LoadTheTruck() {
             <div key={r.name} className="flex items-center gap-3">
               <span
                 className={cn(
-                  "w-32 shrink-0 text-xs",
+                  "w-20 shrink-0 text-[11px] sm:w-32 sm:text-xs",
                   isUs ? "font-display font-bold text-foreground" : "text-muted-foreground",
                 )}
               >
                 {isUs ? (
                   <span className="inline-flex items-center gap-1.5">
-                    <Truck className="size-3.5 text-primary" /> {r.name}
+                    <Truck className="size-3.5 shrink-0 text-primary" /> <span className="truncate">{r.name}</span>
                   </span>
                 ) : (
                   r.name
@@ -277,7 +277,7 @@ export function LoadTheTruck() {
               </span>
               <span
                 className={cn(
-                  "w-16 text-right text-xs tabular-nums",
+                  "w-12 text-right text-[11px] tabular-nums sm:w-16 sm:text-xs",
                   isUs ? "font-bold text-primary" : "text-muted-foreground",
                 )}
               >

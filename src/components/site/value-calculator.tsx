@@ -121,11 +121,11 @@ export function ValueCalculator() {
           </p>
         </div>
 
-        <CtaPair className="mt-6 justify-center" />
-        <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground">
-          <Sparkles className="size-3.5 text-primary" />
+        <CtaPair className="mx-auto mt-6 justify-center" />
+        <p className="mt-4 text-center text-xs leading-relaxed text-muted-foreground">
+          <Sparkles className="mr-1 inline size-3.5 text-primary" />
           Estimates only — call{" "}
-          <a href={BUSINESS.phoneHref} className="font-semibold text-primary hover:underline">
+          <a href={BUSINESS.phoneHref} className="whitespace-nowrap font-semibold text-primary hover:underline">
             <Phone className="mr-1 inline size-3" />
             {BUSINESS.phone}
           </a>{" "}

@@ -15,7 +15,7 @@ export function PageHero({
   breadcrumb?: { to: string; label: string }[];
 }) {
   return (
-    <section className="relative overflow-hidden pb-16 pt-32 sm:pt-40">
+    <section className="relative overflow-hidden pb-10 pt-24 sm:pb-16 sm:pt-40">
       <Aurora />
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
         {breadcrumb ? (
@@ -33,9 +33,9 @@ export function PageHero({
         {eyebrow ? (
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-primary">{eyebrow}</p>
         ) : null}
-        <h1 className="text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{title}</h1>
+        <h1 className="text-balance text-3xl leading-[1.1] sm:text-5xl md:text-6xl">{title}</h1>
         {sub ? <p className="mx-auto mt-5 max-w-2xl text-pretty text-muted-foreground sm:text-lg">{sub}</p> : null}
-        <CtaPair className="mt-8 justify-center" />
+        <CtaPair className="mx-auto mt-8 justify-center" />
       </div>
     </section>
   );
@@ -43,20 +43,20 @@ export function PageHero({
 
 export function CtaPair({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex flex-wrap gap-3 ${className}`}>
+    <div className={`flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap ${className}`}>
       <Link
         to="/contact"
         hash="quote"
-        className="shine group inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:brightness-110"
+        className="shine group inline-flex items-center justify-center rounded-lg px-5 py-3.5 font-display text-[13px] font-bold uppercase tracking-wide text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:brightness-110 sm:px-6 sm:text-sm"
         style={{ background: "var(--gradient-crimson)", boxShadow: "var(--shadow-glow)" }}
       >
         Get My Cash Offer
       </Link>
       <a
         href={BUSINESS.phoneHref}
-        className="glass ring-glow inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
+        className="glass ring-glow inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3.5 font-display text-[13px] font-bold uppercase tracking-wide text-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)] sm:px-6 sm:text-sm"
       >
-        <Phone className="size-4 transition-transform duration-500 group-hover:rotate-12" /> Call {BUSINESS.phone}
+        <Phone className="size-4 shrink-0 transition-transform duration-500 group-hover:rotate-12" /> Call {BUSINESS.phone}
       </a>
     </div>
   );
@@ -64,7 +64,7 @@ export function CtaPair({ className = "" }: { className?: string }) {
 
 export function TrustBadges({ className = "" }: { className?: string }) {
   return (
-    <ul className={`flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground ${className}`}>
+    <ul className={`flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-muted-foreground sm:text-sm ${className}`}>
       {["Free Towing", "Paid On Pickup", "Open Daily", "Any Condition"].map((b) => (
         <li key={b} className="flex items-center gap-2">
           <span className="text-success">✓</span>
@@ -77,15 +77,15 @@ export function TrustBadges({ className = "" }: { className?: string }) {
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-14 sm:py-24">
       <Aurora />
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <Reveal>
-          <h2 className="text-balance text-4xl sm:text-5xl">Ready To Sell Your Junk Car?</h2>
+        <h2 className="text-balance text-3xl sm:text-5xl">Ready To Sell Your Junk Car?</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Get a real cash offer in minutes. Free towing, instant payment, {BUSINESS.hours}.
           </p>
-          <CtaPair className="mt-8 justify-center" />
+          <CtaPair className="mx-auto mt-8 justify-center" />
           <TrustBadges className="mt-6 justify-center" />
         </Reveal>
       </div>

@@ -198,7 +198,7 @@ export function SectionHeading({
       {eyebrow ? (
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-primary">{eyebrow}</p>
       ) : null}
-      <Tag className="text-balance text-3xl leading-tight sm:text-4xl md:text-5xl">{title}</Tag>
+      <Tag className="text-balance text-[1.75rem] leading-tight sm:text-4xl md:text-5xl">{title}</Tag>
       {sub ? <p className="mt-4 text-pretty text-base text-muted-foreground sm:text-lg">{sub}</p> : null}
     </div>
   );
