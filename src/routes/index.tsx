@@ -13,7 +13,7 @@ import {
   Wrench,
 } from "lucide-react";
 import { Aurora, Counter, Marquee, Reveal, SectionHeading, TiltCard } from "@/components/site/fx";
-import { ScannerHero } from "@/components/site/scanner-hero";
+import { HeroOrb } from "@/components/site/hero-orb";
 import { QuoteForm } from "@/components/site/quote-form";
 import { CtaPair, FinalCta, TrustBadges } from "@/components/site/sections";
 import { BulldogLogo } from "@/components/site/logo";
@@ -109,7 +109,7 @@ function Index() {
             <TrustBadges className="mt-6" />
           </div>
           <div className="relative">
-            <ScannerHero />
+            <HeroOrb />
           </div>
         </div>
       </section>
