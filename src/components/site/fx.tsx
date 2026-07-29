@@ -122,14 +122,16 @@ export function TiltCard({ children, className }: { children: ReactNode; classNa
         const r = el.getBoundingClientRect();
         const x = (e.clientX - r.left) / r.width - 0.5;
         const y = (e.clientY - r.top) / r.height - 0.5;
-        el.style.transform = `perspective(900px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-4px)`;
+        el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+        el.style.setProperty("--my", `${e.clientY - r.top}px`);
+        el.style.transform = `perspective(900px) rotateX(${-y * 8}deg) rotateY(${x * 8}deg) translateY(-6px) scale(1.015)`;
       }}
       onPointerLeave={() => {
         const el = ref.current;
         if (el) el.style.transform = "";
       }}
       className={cn(
-        "glass relative rounded-2xl p-6 transition-[transform,box-shadow] duration-300 hover:shadow-[var(--shadow-glow)]",
+        "glass spotlight ring-glow relative rounded-2xl p-6 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:shadow-[var(--shadow-glow)]",
         className,
       )}
     >
