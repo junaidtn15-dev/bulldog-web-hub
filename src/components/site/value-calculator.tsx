@@ -121,7 +121,7 @@ export function ValueCalculator() {
           </p>
         </div>
 
-        <CtaPair className="mt-6 justify-center" />
+        <CtaPair className="mx-auto mt-6 justify-center" />
         <p className="mt-4 flex items-center justify-center gap-2 text-center text-xs text-muted-foreground">
           <Sparkles className="size-3.5 text-primary" />
           Estimates only — call{" "}

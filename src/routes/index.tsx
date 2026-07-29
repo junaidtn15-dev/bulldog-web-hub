@@ -306,7 +306,7 @@ function Index() {
               </p>
               <p className="text-sm uppercase tracking-[0.24em] text-muted-foreground">Typical offer range</p>
             </div>
-            <CtaPair className="mt-8 justify-center" />
+            <CtaPair className="mx-auto mt-8 justify-center" />
           </Reveal>
         </div>
       </section>

@@ -33,9 +33,9 @@ export function PageHero({
         {eyebrow ? (
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-primary">{eyebrow}</p>
         ) : null}
-        <h1 className="text-balance text-4xl leading-[1.05] sm:text-5xl md:text-6xl">{title}</h1>
+        <h1 className="text-balance text-3xl leading-[1.1] sm:text-5xl md:text-6xl">{title}</h1>
         {sub ? <p className="mx-auto mt-5 max-w-2xl text-pretty text-muted-foreground sm:text-lg">{sub}</p> : null}
-        <CtaPair className="mt-8 justify-center" />
+        <CtaPair className="mx-auto mt-8 justify-center" />
       </div>
     </section>
   );
