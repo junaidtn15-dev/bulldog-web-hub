@@ -47,16 +47,16 @@ export function CtaPair({ className = "" }: { className?: string }) {
       <Link
         to="/contact"
         hash="quote"
-        className="inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-primary-foreground transition hover:brightness-110"
+        className="shine group inline-flex items-center justify-center rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:brightness-110"
         style={{ background: "var(--gradient-crimson)", boxShadow: "var(--shadow-glow)" }}
       >
         Get My Cash Offer
       </Link>
       <a
         href={BUSINESS.phoneHref}
-        className="glass inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-foreground transition hover:shadow-[var(--shadow-glow)]"
+        className="glass ring-glow inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 font-display text-sm font-bold uppercase tracking-wide text-foreground transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-glow)]"
       >
-        <Phone className="size-4" /> Call {BUSINESS.phone}
+        <Phone className="size-4 transition-transform duration-500 group-hover:rotate-12" /> Call {BUSINESS.phone}
       </a>
     </div>
   );
