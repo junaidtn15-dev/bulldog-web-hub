@@ -141,8 +141,9 @@ export function SiteFooter() {
           backgroundSize: "48px 48px",
         }}
       />
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
+      <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:grid-cols-2 sm:gap-10 sm:px-6 sm:py-14 md:grid-cols-4">
         <div>
+          <div className="sm:col-span-2 md:col-span-1" />
           <div className="flex items-center gap-3">
             <BulldogLogo className="size-12" />
             <p className="font-display text-lg font-extrabold uppercase">{BUSINESS.name}</p>
@@ -178,7 +179,7 @@ export function SiteFooter() {
           ]}
         />
       </div>
-      <div className="relative border-t border-border/60 px-4 py-5 text-center text-xs text-muted-foreground">
+      <div className="relative border-t border-border/60 px-4 pb-24 pt-5 text-center text-xs text-muted-foreground sm:pb-5">
         © {new Date().getFullYear()} {BUSINESS.name}. Calgary, Alberta. All rights reserved.
       </div>
     </footer>
