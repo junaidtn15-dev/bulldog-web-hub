@@ -337,7 +337,7 @@ function Index() {
                       key={c.slug}
                       to="/service-areas/$city"
                       params={{ city: c.slug }}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 px-2.5 py-1 text-[11px] font-semibold transition hover:border-primary hover:text-primary"
+                      className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full border border-border bg-card/70 px-2 py-1 text-[10px] sm:px-2.5 sm:text-[11px] font-semibold transition hover:border-primary hover:text-primary"
                       style={{
                         left: `${50 + Math.cos(angle) * r}%`,
                         top: `${50 + Math.sin(angle) * r}%`,
