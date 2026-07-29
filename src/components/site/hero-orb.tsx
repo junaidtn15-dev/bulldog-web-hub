@@ -179,18 +179,22 @@ export function HeroOrb() {
       }
 
       // wireframe vehicle
-      ctx.lineWidth = 1.25;
+      ctx.lineWidth = 1.6;
+      ctx.shadowColor = "rgba(34,184,255,0.7)";
+      ctx.shadowBlur = 8;
       for (const [a, b] of lines) {
         const pa = project(a, yaw, pitch, scale);
         const pb = project(b, yaw, pitch, scale);
         const depth = (pa.f + pb.f) / 2;
         const alpha = Math.max(0, Math.min(1, (depth - 0.78) * 3.4));
-        ctx.strokeStyle = `rgba(${20 + alpha * 30},${90 + alpha * 90},${230 + alpha * 25},${0.12 + alpha * 0.72})`;
+        ctx.strokeStyle = `rgba(${16 + alpha * 24},${70 + alpha * 90},${220 + alpha * 30},${0.3 + alpha * 0.7})`;
         ctx.beginPath();
         ctx.moveTo(pa.x, pa.y);
         ctx.lineTo(pb.x, pb.y);
         ctx.stroke();
       }
+
+      ctx.shadowBlur = 0;
 
       // vertex nodes
       for (const c of cloud) {
